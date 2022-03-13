@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="d3/d3.js"></script>
+    <script src="script/source.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleSO.css">
+    <title>Climate Change & Water Resources</title>
+</head>
+
+<body>	
+	<div id="big">
+        <div>
+			<ul>
+				<li><a class="title" href="index.html">Climate change and water resources</a></li>
+				<li><a class="inactive" href="index.html">Temperature Evolution</a></li>
+				<li><a class="inactive" href="resources.html">Water Resources</a></li>
+				<li><a class="inactive" href="wei.html">Water Exploitation Index +</a></li>
+				<li><a class="active" href="source.html">Water Abstraction Sources</a></li>
+				<li><a class="inactive" href="industry.html">Water Use</a></li>
+				</ul>
+        </div>
+	   
+    	<div id="wrapper">
+			<!-- title, text and selector -->
+			<div id="menu">
+			  <h3>Water abstraction by source</h3>
+			  <p id="descr">
+			  Water can be removed either permanently or temporarily. Water from mines, drainage and precipitations 
+			  is included, whereas water used for hydroelectricity generation (in situ use) is excluded.
+			  </p>
+			  <div id="plot-selector">
+				<label>Select Year:</label>
+					<select id="menu2" onchange="drawCharts(this.options[this.selectedIndex].value,menu1.options[menu1.selectedIndex].value)">
+ 						<option value="2007">2007</option>
+						<option value="2008">2008</option>
+						<option value="2009">2009</option> 
+						<option value="2010">2010</option>
+						<option value="2011">2011</option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option> 
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+						<option value="2016">2016</option>
+						<option value="2017">2017</option>
+						<option selected value="2018">2018</option> 						
+					</select>
+				<label>Select Data:</label>
+					<select id="menu1" onchange="drawCharts(menu2.options[menu2.selectedIndex].value,this.options[this.selectedIndex].value)" style="margin-right:20px;">
+						<option selected value="all">All Countries</option> 
+						<option value="top">Only Top Countries</option>
+						<option value="notop">No Top Countries</option>						
+					</select>
+			  </div>
+			  <p id="descr">
+			  Top 10 countries can be removed from the plot for better visualisation. Top 10 countries are Greece, France, Germany, Netherlands, Poland, Serbia, Spain, Turkey and United Kingdom.
+			  <br><br>
+			  <span style="font-weight:900;">FSW</span>: Fresh surface water (million m³)
+			  <br>
+			  <span style="font-weight:900;">FGW</span>: Fresh groundwater (million m³)
+			  <br>
+			  <span style="font-weight:900;">FRW</span>: Combined fresh surface and groundwater (million m³)
+			  </p>
+			</div>
+			<!-- stacked bar plot -->
+			<div id="plot">
+				<svg id="svg_scatter">
+					<g id="circles"></g>
+					<g id="xAxis"></g>
+					<text x="315" y="410" class="labelx">FSW</text>
+					<text transform="rotate(-90)" x="-200" y="22" class="labely">FGW</text>
+					<g id="yAxis"></g>
+				</svg>
+			</div>
+			<!-- legend -->
+			<div id='legend_div'>
+					<svg id="legend">
+					<text x="65" y="175" class="label">FRW</text>
+					</svg>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

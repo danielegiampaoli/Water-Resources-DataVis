@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="d3/d3.js"></script>
+    <script src="script/temp.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleTEMP.css">
+    <title>Climate Change & Water Resources</title>
+</head>
+
+<body>
+	<div id="big">
+        <div>
+			<ul>
+				<li><a class="title" href="index.html">Climate change and water resources</a></li>
+				<li><a class="active" href="index.html">Temperature Evolution</a></li>
+				<li><a class="inactive" href="resources.html">Water Resources</a></li>
+				<li><a class="inactive" href="wei.html">Water Exploitation Index +</a></li>
+				<li><a class="inactive" href="source.html">Water Abstraction Sources</a></li>
+				<li><a class="inactive" href="industry.html">Water Use</a></li>
+			</ul>
+        </div>
+
+		<div id="wrapperT">
+			<!-- text and single plot --> 
+			<div id="menuT" class="float-child">
+				<div id="textT" class="float-child">
+				  <h3>Near surface temperature deviation</h3>
+				  <p id="temptext">The evolution of deviations in average near surface temperature (°C degrees) for Europe, compared to the 1850-1899 average, is shown.
+				  <br>The indicator is part of the EU Sustainable Development Goals (SDG) indicator set and is provided by three different agencies, GISTEMP, HadCRUT and NOAA.
+				  </p>
+				</div>
+				<div id="plotsT">
+				  <div id="tempplot">
+					<svg id="svg_temp">
+						<g id="linesT"></g>
+						<g id="xAxisT"></g>
+						<g id="yAxisT"></g>
+						<text x="205" y="320" class="label">Year</text>
+						<text transform="rotate(-90)" x="-215" y="20" class="labely">Deviation in °C Degrees</text>
+					</svg>
+				  </div>
+				  <div id="legend_div_temp" class="float-child">
+					<svg id="legend_temp"></svg>
+				  </div>
+				</div>
+			</div>
+			<!-- multiple plots -->
+			<div id="multiplesT" class="float-child">
+				<svg id="multi3">
+					<g id="xAxis3"></g>
+					<g id="yAxis3"></g>
+					<g id="lines3"></g>
+				</svg>
+				<svg id="multi1">
+					<g id="xAxis1"></g>
+					<g id="yAxis1"></g>
+					<g id="lines1"></g>
+				</svg>
+				<svg id="multi2">
+					<g id="xAxis2"></g>
+					<g id="yAxis2"></g>
+					<g id="lines2"></g>
+				</svg>
+			</div>
+			<!-- text on the right -->
+			<div id="descrT" class="float-child">
+				<p id="indicator1">NOAAGlobalTemp</p>				
+				<p id="indicator2">GISTEMP</p>
+				<p id="indicator3">HadCRUT4</p>		
+			</div>
+			<div id="descr2T" class="float-child">
+				<p id="description1">
+				Data provider:<br>National Centers for Environmental Information (NOAA Global Temp).
+				</p>
+				<p id="description2">
+				Data provider:<br>NASA Goddard Institute for Space Studies (GISTEMP).				
+				</p>
+				<p id="description3">	
+				Data provider:<br>Met Office Hadley Centre and Climatic Research Unit (HadCRUT4).
+				</p>		
+			</div>
+		</div>
+	</div>
+</body>
+</html>

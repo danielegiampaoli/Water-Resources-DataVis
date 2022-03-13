@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+* {
+	font-family: 'Fira Sans', 'Sans Serif';
+}
+
+#big{
+	width: 100%;
+	height: 100%;
+	float:left;
+}
+
+/* NAVBAR */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.title{
+	font-size: 18px;
+	font-weight: 500;
+	padding: 12px 16px;
+	background-color: #333;
+}
+
+li a.title:hover {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+.inactive {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+li a.inactive:hover {
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  background-color: white;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+}
+
+li a.active:hover {
+  background-color: white;
+  font-weight: 900;
+  color: rgb(100,100,100);
+  text-decoration: none;
+}
+
+/* PLOTS */
+
+h3 {
+	float: left;
+	width: 100%;
+	font-family: 'Roboto Slab', 'Serif';
+	font-weight: 900;
+	padding-left:15px;
+	padding-bottom: 20px;
+}
+
+#wrapper{
+	margin-left:auto;
+    margin-right:auto;
+    height:90%; 
+    width:100%;
+}
+
+#menu{
+	margin-left: 0px;
+	/*width: 400px;*/
+	width: 40%;
+	height: 500px;
+	float: left;
+	padding-left:20px;
+	padding-top: 20px;
+}
+
+#texts{
+	width: 100%;
+	height: 10%;
+}
+
+#paragraph{
+	padding-left: 20px;
+	text-align: justify;
+}
+
+#plots{
+	width: 100%;
+	height: 50%;
+	padding-top: 170px;
+}
+
+#lineplot{
+	float: left;
+	width: 77%;
+	height: 50%;
+	margin-left: 0px;
+	padding-top: 20px;
+}
+
+#svg_line{
+	margin-left: 30px;
+	width: 650px;
+	height: 270px;
+}
+
+#legend_div{
+	padding-top: 60px;
+	width:8%;
+	height: 270px;
+	float:left;
+	margin-left: 10px;
+}
+
+#legend{
+	width:200px;
+	height:200px;
+}
+
+#multiples{
+	width:60%;
+	height: 500px;
+	float: left;
+	padding-top: 87px;
+	padding-left: 45px;
+}
+
+#rowC{
+	float:left;
+	width: 36%;
+	height: 50%;
+}
+
+#multiC{
+	height: 100%;
+}
+
+
+#lab_C{
+	float: left;
+	width: 10%;
+	height: 50%;
+}
+
+#indicatorC{
+	position: relative;
+	font-size: 11px;
+	font-weight: 900;
+	color: #003f5c;
+	top: 15%;
+	left: 0px;
+}
+
+#indicatorE{
+	position: relative;
+	width: 100%;
+	font-size: 11px;
+	font-weight: 900;
+	color: #e60049;
+	top: 44%;
+	left: 0;
+}
+
+#rowG{
+	float:left;
+	width: 36%;
+	height: 50%;
+}
+
+#multiG{
+	height: 100%;
+}
+
+#lab_G{
+	float: left;
+	width: 10%;
+	height: 50%;
+}
+
+#indicatorG{
+	position: relative;
+	width: 100%;
+	font-size: 11px;
+	font-weight: 900;
+	color: #7c1158;
+	top: 37%;
+	left: 0px;
+}
+
+#rowS{
+	float:left;
+	width: 36%;
+	height: 50%;
+}
+
+#multiS{
+	height: 100%;
+}
+
+#lab_S{
+	float: left;
+	width: 10%;
+	height: 50%;
+}
+
+#indicatorS{
+	position: relative;
+	font-size: 11px;
+	font-weight: 900;
+	color: #00bfa0;
+	top: 48%;
+	left: 0px;
+}
+
+#rowM{
+	float:left;
+	width: 36%;
+	height: 50%;
+}
+
+#multiM{
+	height: 100%;
+}
+
+#lab_M{
+	float: left;
+	width: 10%;
+	height: 50%;
+}
+
+#indicatorM{
+	position: relative;
+	font-size: 11px;
+	font-weight: 900;
+	color: #ffa600;
+	top: 52%;
+	left: 0px;
+}
+
+div.tooltip { 
+    position: absolute;     
+    padding: 10px;       
+    font: 14px sans-serif;    
+    background: white; 
+    color:black;
+    border: 2px solid;
+	border-color: grey;
+	border-radius: 6px;
+    pointer-events: none;     
+}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+* {
+	font-family: 'Fira Sans', 'Sans Serif';
+}
+
+#big{
+	width: 100%;
+	height: 100%;
+	float:left;
+}
+
+/* NAVBAR */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.title{
+	font-size: 18px;
+	font-weight: 500;
+	padding: 12px 16px;
+	background-color: #333;
+}
+
+li a.title:hover {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+.inactive {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+li a.inactive:hover {
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  background-color: white;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+}
+
+li a.active:hover {
+  background-color: white;
+  font-weight: 900;
+  color: rgb(100,100,100);
+  text-decoration: none;
+}
+
+/* PLOTS */
+
+h3 {
+	font-family: 'Roboto Slab', 'Serif';
+	font-weight: 900;
+	padding-left:15px;
+}
+
+#wrapper{
+	margin-left:auto;
+    margin-right:auto;
+    height:90%; 
+    width:100%;
+}
+
+#menu{
+	margin-left: 0px;
+	width: 40%;
+	float: left;
+	padding-left:20px;
+	padding-top: 20px;
+	padding-right: 0px;
+	margin-right: 0px;
+}
+
+#descr{
+	margin-top: 20px;
+	text-align: justify;
+	float: left;
+	width: 85%;
+	margin-left: 20px;
+}
+
+#plot-selector{
+	padding-left: 20px;
+	padding-top: 0px;
+	margin-top: 150px;
+}
+
+#legend_div{
+	float: left;
+	width: 10%;
+	height: 220px;
+	margin-top: 83px;
+}
+
+#legend{
+	height: 220px;
+	width: 150px;
+}
+
+#plot{
+	float: left;
+	height: 450px;
+	width: 45%;
+	/*background: red;*/
+	margin-top: 83px;
+	margin-left: -10px;
+	margin-right: 40px;
+	padding-left: 0px;
+}
+
+#svg_scatter{
+	height: 450px;
+	width: 690px;
+}
+
+.form-check-input{
+	width: 45px;
+}
+
+.form-check-label{
+	width: 105px;
+}
+
+div.tooltip { 
+    position: absolute;     
+    padding: 10px;       
+    font: 14px sans-serif;    
+    background: white; 
+    color:black;
+    border: 2px solid;
+	border-color: grey;
+	border-radius: 6px;
+    pointer-events: none;     
+}
+
+#textlab{
+    color: brown;
+    font-weight: bold;
+}
+
+#textlab1{
+    color: red;
+    font-weight: bold;
+}

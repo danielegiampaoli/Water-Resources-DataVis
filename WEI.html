@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="d3/d3.js"></script>
+    <script src="script/wei.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleWEI.css">
+    <title>Climate Change & Water Resources</title>
+</head>
+
+<body>
+	<div id="big">
+        <div>
+			<ul>
+				<li><a class="title" href="index.html">Climate change and water resources</a></li>
+				<li><a class="inactive" href="index.html">Temperature Evolution</a></li>
+				<li><a class="inactive" href="resources.html">Water Resources</a></li>
+				<li><a class="active" href="wei.html">Water Exploitation Index +</a></li>
+				<li><a class="inactive" href="source.html">Water Abstraction Sources</a></li>
+				<li><a class="inactive" href="industry.html">Water Use</a></li>
+			</ul>
+        </div>
+
+		<div id="wrapper">
+			<!-- title, main line plot and legend -->
+			<div id="menu" class="float-child">
+			  <div id="texts">
+				  <h3>Water Exploitation Index +</h3>
+				  <p id="paragraph">
+				  The WEI+ quantifies the percentage difference between how much water is abstracted and how much water is returned after use to the environment. Values >20% indicate progressively stronger water scarcity and unsustainable use.
+				  Southern European countries are those more at risk.
+				  </p>
+			  </div>
+			  <div id="plots">
+				  <div id="lineplot">
+					<svg id="svg_line">
+						<g id="lines"></g>
+						<g id="xAxis"></g>
+						<g id="yAxis"></g>
+						<text x="205" y="270" class="label">Year</text>
+						<text transform="rotate(-90)" x="-150" y="20" class="labely">% Difference</text>
+					</svg>
+				  </div>
+				  <div id="legend_div" class="float-child">
+					<svg id="legend"></svg>
+				  </div>	
+			  </div>
+			</div>
+			<!-- small multiples -->
+			<div id="multiples" class="float-child">
+				<div id="rowC">
+					<svg id="multiC">
+						<g id="xAxisC"></g>
+						<g id="yAxisC"></g>
+						<g id="linesC"></g>
+					</svg>
+				</div>
+				<div id="lab_C">
+					<p id="indicatorC">Cyprus</p>
+					<p id="indicatorE">EU average</p>
+				</div>
+				<div id="rowG">
+					<svg id="multiG">
+						<g id="xAxisG"></g>
+						<g id="yAxisG"></g>
+						<g id="linesG"></g>
+					</svg>
+				</div>
+				<div id="lab_G">	
+					<p id="indicatorG">Greece</p>
+					<p id="indicatorE">EU average</p>					
+				</div>
+				<div id="rowS">
+					<svg id="multiS">
+						<g id="xAxisS"></g>
+						<g id="yAxisS"></g>
+						<g id="linesS"></g>
+					</svg>
+				</div>
+				<div id="lab_S">	
+					<p id="indicatorS">Spain</p>
+					<p id="indicatorE">EU average</p>					
+				</div>
+				<div id="rowM">				
+					<svg id="multiM">
+						<g id="xAxisM"></g>
+						<g id="yAxisM"></g>
+						<g id="linesM"></g>
+					</svg>
+				</div>
+				<div id="lab_M">
+					<p id="indicatorM">Turkey</p>
+					<p id="indicatorE">EU average</p>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

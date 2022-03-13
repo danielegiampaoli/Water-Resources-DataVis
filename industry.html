@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="d3/d3.js"></script>
+    <script src="script/industry.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleIND.css">
+    <title>Climate Change & Water Resources</title>
+</head>
+
+<body>
+    <div id="big">
+        <div>
+			<ul>
+				<li><a class="title" href="index.html">Climate change and water resources</a></li>
+				<li><a class="inactive" href="index.html">Temperature Evolution</a></li>
+				<li><a class="inactive" href="resources.html">Water Resources</a></li>
+				<li><a class="inactive" href="wei.html">Water Exploitation Index +</a></li>
+				<li><a class="inactive" href="source.html">Water Abstraction Sources</a></li>
+				<li><a class="active" href="industry.html">Water Use</a></li>
+			</ul>
+        </div>
+	   
+    	<div id="wrapper">
+			<!-- title, text and selector -->
+			<div id="menu">
+			  <h3>Water abstraction for its use</h3>
+			  <p id="descr">
+			  Freshwater is abstracted by economic units engaged in public collection, purification and distribution of water,
+			  agriculture, cooling procedures in industrial processings and in the generation of electricity.
+			  </p>
+			  <div id="plot-selector">
+				<label>Select Country:</label>
+					<select id="menu2" onchange="drawCharts(this.options[this.selectedIndex].value)">
+						<option value="Bosnia and Herzegovina">Bos. and Herz.</option>
+						<option value="Belgium">Belgium</option>
+						<option value="Bulgaria">Bulgaria</option>									
+						<option selected value="Croatia">Croatia</option>
+						<option value="Cyprus">Cyprus</option>
+						<option value="Czechia">Czechia</option>
+						<option value="Denmark">Denmark</option>
+						<option value="Estonia">Estonia</option>									
+						<option value="Finland">Finland</option>									
+						<option value="France">France</option>
+						<option value="Greece">Greece</option>
+						<option value="Germany">Germany</option>									
+						<option value="Hungary">Hungary</option>									
+						<option value="Ireland">Ireland</option>
+						<option value="Italy">Italy</option>
+						<option value="Kosovo">Kosovo</option>									
+						<option value="Lithuania">Lithuania</option>									
+						<option value="Luxembourg">Luxembourg</option>									
+						<option value="Latvia">Latvia</option>	
+						<option value="Malta">Malta</option>								
+						<option value="Netherlands">Netherlands</option>								
+						<option value="Norway">Norway</option>								
+						<option value="Macedonia">N. Macedonia</option>		
+						<option value="Poland">Poland</option>
+						<option value="Romania">Romania</option>	
+						<option value="Serbia">Serbia</option>	
+						<option value="Slovenia">Slovenia</option>	
+						<option value="Slovakia">Slovakia</option>	
+						<option value="Spain">Spain</option>
+						<option value="Switzerland">Switzerland</option>		
+						<option value="Turkey">Turkey</option>
+						<option value="United Kingdom">UK</option>				
+					</select>
+			  </div>
+			  <div id="image">
+					<img id="tank" src="images/icon.png">
+			  </div>
+			  <div id='legend_div'>
+					<svg id="legend">
+					</svg>
+			  </div>
+			</div>
+			<!-- stacked bar plot -->
+			<div id="plot">
+				<svg id="svg_bar">
+					<g id="bars"></g>
+					<g id="xAxis"></g>
+					<g id="yAxis"></g>
+					<text x="310" y="405" class="label">Year</text>
+					<text transform="rotate(-90)" x="-225" y="20" class="labely">Million m³</text>
+				</svg>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
